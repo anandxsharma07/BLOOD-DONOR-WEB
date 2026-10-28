@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Need blood | LifeLine Blood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-page="patient">
+<header class="top"><div class="bar"><a class="brand" href="index.html">LifeLine Blood</a><nav aria-label="Main">
+<a href="index.html" aria-current="page">Need blood</a><a href="donor.html" >Become a donor</a><a href="doctor.html" >Doctor advice</a></nav></div></header>
+<main>
+  <h1>Find a blood donor near you</h1>
+  <p class="lead">Pick the blood group the patient needs. You will see matching donors sorted by distance, with their health update and doctor review.</p>
+  <div class="panel">
+    <h2>Blood group needed</h2>
+    <div id="tiles" class="tiles" role="group" aria-label="Blood group"></div>
+    <form id="reqForm" style="margin-top:20px">
+      <div class="grid">
+        <div><label for="pname">Patient name</label><input id="pname" required></div>
+        <div><label for="units">Units needed</label><input id="units" type="number" min="1" max="10" value="1" required></div>
+        <div><label for="urgency">Urgency</label><select id="urgency"><option>Emergency</option><option>Within 24 hours</option><option>Planned surgery</option></select></div>
+        <div><label for="hospital">Hospital</label><input id="hospital" required></div>
+        <div><label for="city">City</label><input id="city" required></div>
+        <div><label for="pphone">Contact number</label><input id="pphone" type="tel" pattern="[0-9+ \-]{7,15}" required></div>
+      </div>
+      <p style="margin-top:16px"><button class="btn" type="submit">Post blood request</button></p>
+      <div id="reqMsg" role="status"></div>
+    </form>
+  </div>
+  <section><h2 id="resTitle">Matching donors</h2><div id="results"></div></section>
+  <section><h2>Open blood requests</h2><div id="requests"></div></section>
+  <p class="note">Donors marked "Not fit" by a doctor are hidden. Always confirm blood group and fitness at the hospital before donation. Sample donors are demo data.</p>
+</main>
+<script src="script.js"></script></body></html>

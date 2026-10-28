@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doctor advice | LifeLine Blood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-page="doctor">
+<header class="top"><div class="bar"><a class="brand" href="index.html">LifeLine Blood</a><nav aria-label="Main">
+<a href="index.html" >Need blood</a><a href="donor.html" >Become a donor</a><a href="doctor.html" aria-current="page">Doctor advice</a></nav></div></header>
+<main>
+  <h1>Doctor suggestions</h1>
+  <p class="lead">Doctors review donors and leave a fitness verdict. Patients see it on every donor card.</p>
+  <div class="tips">
+    <div class="panel"><h3>Before donating</h3><ul><li>Age 18 to 65, weight at least 50 kg.</li><li>Hemoglobin at least 12.5 g/dL.</li><li>Eat a meal and drink plenty of water.</li><li>Sleep well the night before.</li></ul></div>
+    <div class="panel"><h3>After donating</h3><ul><li>Rest 10 to 15 minutes and have a snack.</li><li>Avoid heavy exercise for 24 hours.</li><li>Keep the bandage on for several hours.</li><li>Wait at least 3 months before donating again.</li></ul></div>
+    <div class="panel"><h3>Do not donate if</h3><ul><li>You have a fever, infection or cold.</li><li>You had surgery, tattoo or piercing in the last 6 months.</li><li>You are pregnant or breastfeeding.</li><li>You take blood thinners or have a serious illness.</li></ul></div>
+  </div>
+  <section><h2>Review a donor</h2>
+  <form id="docForm" class="panel">
+    <div class="grid">
+      <div><label for="donorSel">Donor</label><select id="donorSel" name="donorSel" required></select></div>
+      <div><label for="doctor">Doctor name</label><input id="doctor" name="doctor" required></div>
+      <div><label for="verdict">Verdict</label><select id="verdict" name="verdict"><option>Fit</option><option>Wait</option><option>Not fit</option></select></div>
+    </div>
+    <div style="margin-top:14px"><label for="note">Suggestion for the donor</label><textarea id="note" name="note" required></textarea></div>
+    <p><button class="btn teal" type="submit">Save review</button></p>
+    <div id="docMsg" role="status"></div>
+  </form></section>
+  <section><h2>Recent reviews</h2><div id="reviews"></div></section>
+</main>
+<script src="script.js"></script></body></html>

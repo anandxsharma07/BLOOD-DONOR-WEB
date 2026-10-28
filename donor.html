@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Become a donor | LifeLine Blood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body data-page="donor">
+<header class="top"><div class="bar"><a class="brand" href="index.html">LifeLine Blood</a><nav aria-label="Main">
+<a href="index.html" >Need blood</a><a href="donor.html" aria-current="page">Become a donor</a><a href="doctor.html" >Doctor advice</a></nav></div></header>
+<main>
+  <h1>Register as a blood donor</h1>
+  <p class="lead"><b id="count">0</b> donors are registered. Your phone number and address are shown to patients so they can reach you.</p>
+  <form id="donorForm" class="panel">
+    <div class="grid">
+      <div><label for="dname">Full name</label><input id="dname" name="dname" required></div>
+      <div><label for="age">Age</label><input id="age" name="age" type="number" min="18" max="65" required></div>
+      <div><label for="gender">Gender</label><select id="gender" name="gender"><option>Male</option><option>Female</option><option>Other</option></select></div>
+      <div><label for="group">Blood group</label><select id="group" name="group" required></select></div>
+      <div><label for="phone">Contact number</label><input id="phone" name="phone" type="tel" pattern="[0-9+ \-]{7,15}" required></div>
+      <div><label for="city">City</label><input id="city" name="city" required></div>
+      <div><label for="distance">Distance from city centre (km)</label><input id="distance" name="distance" type="number" min="0" max="200" required></div>
+      <div><label for="last">Last donation date (if any)</label><input id="last" name="last" type="date"></div>
+      <div><label for="health">Current health</label><select id="health" name="health"></select></div>
+    </div>
+    <div style="margin-top:14px"><label for="address">Full address</label><textarea id="address" name="address" required></textarea></div>
+    <div style="margin-top:14px"><label for="note">Health note (optional)</label><input id="note" name="note" placeholder="For example: fever, 2 days"></div>
+    <p><button class="btn" type="submit">Register as donor</button></p>
+    <div id="donorMsg" role="status"></div>
+  </form>
+
+  <section><h2>Update your health status</h2>
+  <form id="updForm" class="panel">
+    <div class="grid">
+      <div><label for="uphone">Your registered phone</label><input id="uphone" name="uphone" type="tel" required></div>
+      <div><label for="uhealth">Current health</label><select id="uhealth" name="uhealth"></select></div>
+      <div><label for="ulast">New donation date (optional)</label><input id="ulast" name="ulast" type="date"></div>
+    </div>
+    <div style="margin-top:14px"><label for="unote">Health note</label><input id="unote" name="unote"></div>
+    <p><button class="btn teal" type="submit">Save health update</button></p>
+    <div id="updMsg" role="status"></div>
+  </form></section>
+</main>
+<script src="script.js"></script></body></html>
